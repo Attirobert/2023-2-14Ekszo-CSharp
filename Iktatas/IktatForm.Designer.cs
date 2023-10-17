@@ -35,46 +35,46 @@ namespace Iktatas
             this.iktatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iktatTableAdapter = new Iktatas.IktatDSTableAdapters.iktatTableAdapter();
             this.tableAdapterManager = new Iktatas.IktatDSTableAdapters.TableAdapterManager();
+            this.temakTableAdapter = new Iktatas.IktatDSTableAdapters.TemakTableAdapter();
+            this.usersTableAdapter1 = new Iktatas.IktatDSTableAdapters.UsersTableAdapter();
             this.iktatBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.iktatBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.iktatDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cnIktatoszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cnDatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.temakBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersDS = new Iktatas.UsersDS();
             this.usersDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new Iktatas.UsersDSTableAdapters.UsersTableAdapter();
-            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter1 = new Iktatas.IktatDSTableAdapters.UsersTableAdapter();
             this.temakBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.temakTableAdapter = new Iktatas.IktatDSTableAdapters.TemakTableAdapter();
-            this.temakBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cnIktatoszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.cnDatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.iktatDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iktatBindingNavigator)).BeginInit();
             this.iktatBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iktatDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.temakBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.temakBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temakBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // iktatDS
@@ -98,6 +98,14 @@ namespace Iktatas
             this.tableAdapterManager.TemakTableAdapter = this.temakTableAdapter;
             this.tableAdapterManager.UpdateOrder = Iktatas.IktatDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter1;
+            // 
+            // temakTableAdapter
+            // 
+            this.temakTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
             // 
             // iktatBindingNavigator
             // 
@@ -129,6 +137,31 @@ namespace Iktatas
             this.iktatBindingNavigator.TabIndex = 0;
             this.iktatBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -156,22 +189,16 @@ namespace Iktatas
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -179,7 +206,7 @@ namespace Iktatas
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -188,38 +215,20 @@ namespace Iktatas
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // iktatBindingNavigatorSaveItem
             // 
             this.iktatBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.iktatBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("iktatBindingNavigatorSaveItem.Image")));
             this.iktatBindingNavigatorSaveItem.Name = "iktatBindingNavigatorSaveItem";
-            this.iktatBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.iktatBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.iktatBindingNavigatorSaveItem.Text = "Save Data";
             this.iktatBindingNavigatorSaveItem.Click += new System.EventHandler(this.iktatBindingNavigatorSaveItem_Click);
             // 
@@ -238,51 +247,11 @@ namespace Iktatas
             this.iktatDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.iktatDataGridView.Location = new System.Drawing.Point(0, 25);
             this.iktatDataGridView.Name = "iktatDataGridView";
+            this.iktatDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.iktatDataGridView.Size = new System.Drawing.Size(800, 425);
             this.iktatDataGridView.TabIndex = 1;
+            this.iktatDataGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.iktatDataGridView_CellValidating);
             this.iktatDataGridView.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.iktatDataGridView_DefaultValuesNeeded);
-            // 
-            // usersDS
-            // 
-            this.usersDS.DataSetName = "UsersDS";
-            this.usersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersDSBindingSource
-            // 
-            this.usersDSBindingSource.DataSource = this.usersDS;
-            this.usersDSBindingSource.Position = 0;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.usersDS;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // usersBindingSource1
-            // 
-            this.usersBindingSource1.DataMember = "Users";
-            this.usersBindingSource1.DataSource = this.iktatDS;
-            // 
-            // usersTableAdapter1
-            // 
-            this.usersTableAdapter1.ClearBeforeFill = true;
-            // 
-            // temakBindingSource
-            // 
-            this.temakBindingSource.DataMember = "Temak";
-            this.temakBindingSource.DataSource = this.iktatDS;
-            // 
-            // temakTableAdapter
-            // 
-            this.temakTableAdapter.ClearBeforeFill = true;
-            // 
-            // temakBindingSource1
-            // 
-            this.temakBindingSource1.DataMember = "Temak";
-            this.temakBindingSource1.DataSource = this.iktatDS;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -308,6 +277,11 @@ namespace Iktatas
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn3.ValueMember = "Id_user";
             // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "Users";
+            this.usersBindingSource1.DataSource = this.iktatDS;
+            // 
             // cnDatum
             // 
             this.cnDatum.DataPropertyName = "Datum";
@@ -327,12 +301,41 @@ namespace Iktatas
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn5.ValueMember = "Id_Tema";
             // 
+            // temakBindingSource1
+            // 
+            this.temakBindingSource1.DataMember = "Temak";
+            this.temakBindingSource1.DataSource = this.iktatDS;
+            // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Leiras";
             this.dataGridViewTextBoxColumn6.HeaderText = "Leirás";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ToolTipText = "A levél tartalmának részletesebb leírása";
+            // 
+            // usersDS
+            // 
+            this.usersDS.DataSetName = "UsersDS";
+            this.usersDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersDSBindingSource
+            // 
+            this.usersDSBindingSource.DataSource = this.usersDS;
+            this.usersDSBindingSource.Position = 0;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.usersDS;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // temakBindingSource
+            // 
+            this.temakBindingSource.DataMember = "Temak";
+            this.temakBindingSource.DataSource = this.iktatDS;
             // 
             // IktatForm
             // 
@@ -350,12 +353,12 @@ namespace Iktatas
             this.iktatBindingNavigator.ResumeLayout(false);
             this.iktatBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iktatDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.temakBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.temakBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temakBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

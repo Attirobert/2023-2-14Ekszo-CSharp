@@ -62,6 +62,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IktatDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="IktatEgyes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IktatEgyes.Designer.cs">
+      <DependentUpon>IktatEgyes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IktatEgyesDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IktatEgyesDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="IktatForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +123,9 @@
     <EmbeddedResource Include="BeosztasokForm.resx">
       <DependentUpon>BeosztasokForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IktatEgyes.resx">
+      <DependentUpon>IktatEgyes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IktatForm.resx">
       <DependentUpon>IktatForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +171,17 @@
     </None>
     <None Include="IktatDS.xss">
       <DependentUpon>IktatDS.xsd</DependentUpon>
+    </None>
+    <None Include="IktatEgyesDS.xsc">
+      <DependentUpon>IktatEgyesDS.xsd</DependentUpon>
+    </None>
+    <None Include="IktatEgyesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IktatEgyesDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IktatEgyesDS.xss">
+      <DependentUpon>IktatEgyesDS.xsd</DependentUpon>
     </None>
     <None Include="OsztalyokDS.xsc">
       <DependentUpon>OsztalyokDS.xsd</DependentUpon>

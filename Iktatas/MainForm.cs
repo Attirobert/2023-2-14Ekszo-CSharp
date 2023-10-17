@@ -46,5 +46,11 @@ namespace Iktatas
             IktatForm frm = new IktatForm();
             frm.Show();
         }
+
+        private void iktatóLapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IktatEgyes frm = new IktatEgyes();
+            frm.Show();
+        }
     }
 }

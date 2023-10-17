@@ -47,9 +47,27 @@ namespace Iktatas
             string ma = DateTime.Today.ToString();
             this.sorszam++;
 
-            e.Row.Cells["cnIktatoszam"].Value = ma.Substring(0, 4) + ma.Substring(6, 2) + ma.Substring(10,2) + "/" + this.sorszam.ToString();
+            e.Row.Cells["cnIktatoszam"].Value = ma.Substring(0, 4) + 
+                ma.Substring(6, 2) + 
+                ma.Substring(10,2) + "/" + 
+                this.sorszam.ToString();
 
             e.Row.Cells["cnDatum"].Value = ma;
         }
+
+        private void iktatDataGridView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            string ma = DateTime.Today.ToShortDateString();
+
+            if (e.FormattedValue.ToString() != ma)
+            {
+            MessageBox.Show("Hibás dátum!");
+            }
+            else
+            {
+                MessageBox.Show("Jó dátum!");
+            }
+        }
+
     }
 }
