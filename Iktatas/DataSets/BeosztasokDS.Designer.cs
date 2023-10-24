@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Iktatas {
+namespace Iktatas.DataSets {
     
     
     /// <summary>
@@ -622,7 +622,7 @@ namespace Iktatas {
         }
     }
 }
-namespace Iktatas.BeosztasokDSTableAdapters {
+namespace Iktatas.DataSets.BeosztasokDSTableAdapters {
     
     
     /// <summary>

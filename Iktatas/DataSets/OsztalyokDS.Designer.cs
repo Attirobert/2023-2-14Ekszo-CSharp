@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Iktatas {
+namespace Iktatas.DataSets {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace Iktatas {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("UsersDS")]
+    [global::System.Xml.Serialization.XmlRootAttribute("OsztalyokDS")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class UsersDS : global::System.Data.DataSet {
+    public partial class OsztalyokDS : global::System.Data.DataSet {
         
-        private UsersDataTable tableUsers;
+        private OsztalyokDataTable tableOsztalyok;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public UsersDS() {
+        public OsztalyokDS() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Iktatas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected UsersDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected OsztalyokDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Iktatas {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Users"] != null)) {
-                    base.Tables.Add(new UsersDataTable(ds.Tables["Users"]));
+                if ((ds.Tables["Osztalyok"] != null)) {
+                    base.Tables.Add(new OsztalyokDataTable(ds.Tables["Osztalyok"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Iktatas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public UsersDataTable Users {
+        public OsztalyokDataTable Osztalyok {
             get {
-                return this.tableUsers;
+                return this.tableOsztalyok;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            UsersDS cln = ((UsersDS)(base.Clone()));
+            OsztalyokDS cln = ((OsztalyokDS)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Iktatas {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Users"] != null)) {
-                    base.Tables.Add(new UsersDataTable(ds.Tables["Users"]));
+                if ((ds.Tables["Osztalyok"] != null)) {
+                    base.Tables.Add(new OsztalyokDataTable(ds.Tables["Osztalyok"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableUsers = ((UsersDataTable)(base.Tables["Users"]));
+            this.tableOsztalyok = ((OsztalyokDataTable)(base.Tables["Osztalyok"]));
             if ((initTable == true)) {
-                if ((this.tableUsers != null)) {
-                    this.tableUsers.InitVars();
+                if ((this.tableOsztalyok != null)) {
+                    this.tableOsztalyok.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "UsersDS";
+            this.DataSetName = "OsztalyokDS";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/UsersDS.xsd";
+            this.Namespace = "http://tempuri.org/OsztalyokDS.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableUsers = new UsersDataTable();
-            base.Tables.Add(this.tableUsers);
+            this.tableOsztalyok = new OsztalyokDataTable();
+            base.Tables.Add(this.tableOsztalyok);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeUsers() {
+        private bool ShouldSerializeOsztalyok() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            UsersDS ds = new UsersDS();
+            OsztalyokDS ds = new OsztalyokDS();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,23 @@ namespace Iktatas {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void UsersRowChangeEventHandler(object sender, UsersRowChangeEvent e);
+        public delegate void OsztalyokRowChangeEventHandler(object sender, OsztalyokRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class UsersDataTable : global::System.Data.TypedTableBase<UsersRow> {
+        public partial class OsztalyokDataTable : global::System.Data.TypedTableBase<OsztalyokRow> {
             
-            private global::System.Data.DataColumn columnId_user;
+            private global::System.Data.DataColumn columnId_Osztaly;
             
-            private global::System.Data.DataColumn columnNev;
-            
-            private global::System.Data.DataColumn columnJelszo;
-            
-            private global::System.Data.DataColumn columnAdmin;
+            private global::System.Data.DataColumn columnOsztaly;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersDataTable() {
-                this.TableName = "Users";
+            public OsztalyokDataTable() {
+                this.TableName = "Osztalyok";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +294,7 @@ namespace Iktatas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal UsersDataTable(global::System.Data.DataTable table) {
+            internal OsztalyokDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,40 +311,24 @@ namespace Iktatas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected UsersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected OsztalyokDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Id_userColumn {
+            public global::System.Data.DataColumn Id_OsztalyColumn {
                 get {
-                    return this.columnId_user;
+                    return this.columnId_Osztaly;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NevColumn {
+            public global::System.Data.DataColumn OsztalyColumn {
                 get {
-                    return this.columnNev;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn JelszoColumn {
-                get {
-                    return this.columnJelszo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn AdminColumn {
-                get {
-                    return this.columnAdmin;
+                    return this.columnOsztaly;
                 }
             }
             
@@ -363,55 +343,53 @@ namespace Iktatas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersRow this[int index] {
+            public OsztalyokRow this[int index] {
                 get {
-                    return ((UsersRow)(this.Rows[index]));
+                    return ((OsztalyokRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event UsersRowChangeEventHandler UsersRowChanging;
+            public event OsztalyokRowChangeEventHandler OsztalyokRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event UsersRowChangeEventHandler UsersRowChanged;
+            public event OsztalyokRowChangeEventHandler OsztalyokRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event UsersRowChangeEventHandler UsersRowDeleting;
+            public event OsztalyokRowChangeEventHandler OsztalyokRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event UsersRowChangeEventHandler UsersRowDeleted;
+            public event OsztalyokRowChangeEventHandler OsztalyokRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddUsersRow(UsersRow row) {
+            public void AddOsztalyokRow(OsztalyokRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersRow AddUsersRow(string Nev, string Jelszo, byte Admin) {
-                UsersRow rowUsersRow = ((UsersRow)(this.NewRow()));
+            public OsztalyokRow AddOsztalyokRow(string Osztaly) {
+                OsztalyokRow rowOsztalyokRow = ((OsztalyokRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Nev,
-                        Jelszo,
-                        Admin};
-                rowUsersRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowUsersRow);
-                return rowUsersRow;
+                        Osztaly};
+                rowOsztalyokRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowOsztalyokRow);
+                return rowOsztalyokRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersRow FindById_user(int Id_user) {
-                return ((UsersRow)(this.Rows.Find(new object[] {
-                            Id_user})));
+            public OsztalyokRow FindById_Osztaly(int Id_Osztaly) {
+                return ((OsztalyokRow)(this.Rows.Find(new object[] {
+                            Id_Osztaly})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                UsersDataTable cln = ((UsersDataTable)(base.Clone()));
+                OsztalyokDataTable cln = ((OsztalyokDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,68 +397,59 @@ namespace Iktatas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new UsersDataTable();
+                return new OsztalyokDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnId_user = base.Columns["Id_user"];
-                this.columnNev = base.Columns["Nev"];
-                this.columnJelszo = base.Columns["Jelszo"];
-                this.columnAdmin = base.Columns["Admin"];
+                this.columnId_Osztaly = base.Columns["Id_Osztaly"];
+                this.columnOsztaly = base.Columns["Osztaly"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnId_user = new global::System.Data.DataColumn("Id_user", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_user);
-                this.columnNev = new global::System.Data.DataColumn("Nev", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNev);
-                this.columnJelszo = new global::System.Data.DataColumn("Jelszo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnJelszo);
-                this.columnAdmin = new global::System.Data.DataColumn("Admin", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAdmin);
+                this.columnId_Osztaly = new global::System.Data.DataColumn("Id_Osztaly", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Osztaly);
+                this.columnOsztaly = new global::System.Data.DataColumn("Osztaly", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOsztaly);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId_user}, true));
-                this.columnId_user.AutoIncrement = true;
-                this.columnId_user.AutoIncrementSeed = -1;
-                this.columnId_user.AutoIncrementStep = -1;
-                this.columnId_user.AllowDBNull = false;
-                this.columnId_user.ReadOnly = true;
-                this.columnId_user.Unique = true;
-                this.columnNev.AllowDBNull = false;
-                this.columnNev.MaxLength = 20;
-                this.columnJelszo.AllowDBNull = false;
-                this.columnJelszo.MaxLength = 10;
-                this.columnAdmin.AllowDBNull = false;
+                                this.columnId_Osztaly}, true));
+                this.columnId_Osztaly.AutoIncrement = true;
+                this.columnId_Osztaly.AutoIncrementSeed = -1;
+                this.columnId_Osztaly.AutoIncrementStep = -1;
+                this.columnId_Osztaly.AllowDBNull = false;
+                this.columnId_Osztaly.ReadOnly = true;
+                this.columnId_Osztaly.Unique = true;
+                this.columnOsztaly.AllowDBNull = false;
+                this.columnOsztaly.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersRow NewUsersRow() {
-                return ((UsersRow)(this.NewRow()));
+            public OsztalyokRow NewOsztalyokRow() {
+                return ((OsztalyokRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new UsersRow(builder);
+                return new OsztalyokRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(UsersRow);
+                return typeof(OsztalyokRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.UsersRowChanged != null)) {
-                    this.UsersRowChanged(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
+                if ((this.OsztalyokRowChanged != null)) {
+                    this.OsztalyokRowChanged(this, new OsztalyokRowChangeEvent(((OsztalyokRow)(e.Row)), e.Action));
                 }
             }
             
@@ -488,8 +457,8 @@ namespace Iktatas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.UsersRowChanging != null)) {
-                    this.UsersRowChanging(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
+                if ((this.OsztalyokRowChanging != null)) {
+                    this.OsztalyokRowChanging(this, new OsztalyokRowChangeEvent(((OsztalyokRow)(e.Row)), e.Action));
                 }
             }
             
@@ -497,8 +466,8 @@ namespace Iktatas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.UsersRowDeleted != null)) {
-                    this.UsersRowDeleted(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
+                if ((this.OsztalyokRowDeleted != null)) {
+                    this.OsztalyokRowDeleted(this, new OsztalyokRowChangeEvent(((OsztalyokRow)(e.Row)), e.Action));
                 }
             }
             
@@ -506,14 +475,14 @@ namespace Iktatas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.UsersRowDeleting != null)) {
-                    this.UsersRowDeleting(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
+                if ((this.OsztalyokRowDeleting != null)) {
+                    this.OsztalyokRowDeleting(this, new OsztalyokRowChangeEvent(((OsztalyokRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveUsersRow(UsersRow row) {
+            public void RemoveOsztalyokRow(OsztalyokRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -522,7 +491,7 @@ namespace Iktatas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                UsersDS ds = new UsersDS();
+                OsztalyokDS ds = new OsztalyokDS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -540,7 +509,7 @@ namespace Iktatas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "UsersDataTable";
+                attribute2.FixedValue = "OsztalyokDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -584,58 +553,36 @@ namespace Iktatas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class UsersRow : global::System.Data.DataRow {
+        public partial class OsztalyokRow : global::System.Data.DataRow {
             
-            private UsersDataTable tableUsers;
+            private OsztalyokDataTable tableOsztalyok;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal UsersRow(global::System.Data.DataRowBuilder rb) : 
+            internal OsztalyokRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableUsers = ((UsersDataTable)(this.Table));
+                this.tableOsztalyok = ((OsztalyokDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id_user {
+            public int Id_Osztaly {
                 get {
-                    return ((int)(this[this.tableUsers.Id_userColumn]));
+                    return ((int)(this[this.tableOsztalyok.Id_OsztalyColumn]));
                 }
                 set {
-                    this[this.tableUsers.Id_userColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Nev {
-                get {
-                    return ((string)(this[this.tableUsers.NevColumn]));
-                }
-                set {
-                    this[this.tableUsers.NevColumn] = value;
+                    this[this.tableOsztalyok.Id_OsztalyColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Jelszo {
+            public string Osztaly {
                 get {
-                    return ((string)(this[this.tableUsers.JelszoColumn]));
+                    return ((string)(this[this.tableOsztalyok.OsztalyColumn]));
                 }
                 set {
-                    this[this.tableUsers.JelszoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public byte Admin {
-                get {
-                    return ((byte)(this[this.tableUsers.AdminColumn]));
-                }
-                set {
-                    this[this.tableUsers.AdminColumn] = value;
+                    this[this.tableOsztalyok.OsztalyColumn] = value;
                 }
             }
         }
@@ -644,22 +591,22 @@ namespace Iktatas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class UsersRowChangeEvent : global::System.EventArgs {
+        public class OsztalyokRowChangeEvent : global::System.EventArgs {
             
-            private UsersRow eventRow;
+            private OsztalyokRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersRowChangeEvent(UsersRow row, global::System.Data.DataRowAction action) {
+            public OsztalyokRowChangeEvent(OsztalyokRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersRow Row {
+            public OsztalyokRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -675,7 +622,7 @@ namespace Iktatas {
         }
     }
 }
-namespace Iktatas.UsersDSTableAdapters {
+namespace Iktatas.DataSets.OsztalyokDSTableAdapters {
     
     
     /// <summary>
@@ -687,7 +634,7 @@ namespace Iktatas.UsersDSTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class UsersTableAdapter : global::System.ComponentModel.Component {
+    public partial class OsztalyokTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -701,7 +648,7 @@ namespace Iktatas.UsersDSTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public UsersTableAdapter() {
+        public OsztalyokTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -798,43 +745,33 @@ namespace Iktatas.UsersDSTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Users";
-            tableMapping.ColumnMappings.Add("Id_user", "Id_user");
-            tableMapping.ColumnMappings.Add("Nev", "Nev");
-            tableMapping.ColumnMappings.Add("Jelszo", "Jelszo");
-            tableMapping.ColumnMappings.Add("Admin", "Admin");
+            tableMapping.DataSetTable = "Osztalyok";
+            tableMapping.ColumnMappings.Add("Id_Osztaly", "Id_Osztaly");
+            tableMapping.ColumnMappings.Add("Osztaly", "Osztaly");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Users] WHERE (([Id_user] = @Original_Id_user) AND ([Nev] = @Or" +
-                "iginal_Nev) AND ([Jelszo] = @Original_Jelszo) AND ([Admin] = @Original_Admin))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Osztalyok] WHERE (([Id_Osztaly] = @Original_Id_Osztaly) AND ([" +
+                "Osztaly] = @Original_Osztaly))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nev", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jelszo", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jelszo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Admin", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Admin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Osztaly", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Osztaly", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Osztaly", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Osztaly", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Users] ([Nev], [Jelszo], [Admin]) VALUES (@Nev, @Jelszo, @Admi" +
-                "n);\r\nSELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = SCOPE_IDENTI" +
-                "TY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Osztalyok] ([Osztaly]) VALUES (@Osztaly);\r\nSELECT Id_Osztaly, " +
+                "Osztaly FROM Osztalyok WHERE (Id_Osztaly = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nev", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jelszo", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jelszo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Admin", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Admin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Osztaly", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Osztaly", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Users] SET [Nev] = @Nev, [Jelszo] = @Jelszo, [Admin] = @Admin WHERE (([Id_user] = @Original_Id_user) AND ([Nev] = @Original_Nev) AND ([Jelszo] = @Original_Jelszo) AND ([Admin] = @Original_Admin));
-SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Osztalyok] SET [Osztaly] = @Osztaly WHERE (([Id_Osztaly] = @Origina" +
+                "l_Id_Osztaly) AND ([Osztaly] = @Original_Osztaly));\r\nSELECT Id_Osztaly, Osztaly " +
+                "FROM Osztalyok WHERE (Id_Osztaly = @Id_Osztaly)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nev", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jelszo", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jelszo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Admin", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Admin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nev", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jelszo", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jelszo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Admin", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Admin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_user", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Osztaly", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Osztaly", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Osztaly", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Osztaly", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Osztaly", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Osztaly", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Osztaly", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Osztaly", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -850,7 +787,7 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id_user, Nev, Jelszo, Admin FROM dbo.Users";
+            this._commandCollection[0].CommandText = "SELECT Id_Osztaly, Osztaly FROM dbo.Osztalyok";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -858,7 +795,7 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(UsersDS.UsersDataTable dataTable) {
+        public virtual int Fill(OsztalyokDS.OsztalyokDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -871,9 +808,9 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual UsersDS.UsersDataTable GetData() {
+        public virtual OsztalyokDS.OsztalyokDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            UsersDS.UsersDataTable dataTable = new UsersDS.UsersDataTable();
+            OsztalyokDS.OsztalyokDataTable dataTable = new OsztalyokDS.OsztalyokDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -881,15 +818,15 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(UsersDS.UsersDataTable dataTable) {
+        public virtual int Update(OsztalyokDS.OsztalyokDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(UsersDS dataSet) {
-            return this.Adapter.Update(dataSet, "Users");
+        public virtual int Update(OsztalyokDS dataSet) {
+            return this.Adapter.Update(dataSet, "Osztalyok");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -911,21 +848,14 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id_user, string Original_Nev, string Original_Jelszo, byte Original_Admin) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_user));
-            if ((Original_Nev == null)) {
-                throw new global::System.ArgumentNullException("Original_Nev");
+        public virtual int Delete(int Original_Id_Osztaly, string Original_Osztaly) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_Osztaly));
+            if ((Original_Osztaly == null)) {
+                throw new global::System.ArgumentNullException("Original_Osztaly");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nev));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Osztaly));
             }
-            if ((Original_Jelszo == null)) {
-                throw new global::System.ArgumentNullException("Original_Jelszo");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Jelszo));
-            }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((byte)(Original_Admin));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -946,20 +876,13 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nev, string Jelszo, byte Admin) {
-            if ((Nev == null)) {
-                throw new global::System.ArgumentNullException("Nev");
+        public virtual int Insert(string Osztaly) {
+            if ((Osztaly == null)) {
+                throw new global::System.ArgumentNullException("Osztaly");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nev));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Osztaly));
             }
-            if ((Jelszo == null)) {
-                throw new global::System.ArgumentNullException("Jelszo");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Jelszo));
-            }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((byte)(Admin));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -980,35 +903,21 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nev, string Jelszo, byte Admin, int Original_Id_user, string Original_Nev, string Original_Jelszo, byte Original_Admin, int Id_user) {
-            if ((Nev == null)) {
-                throw new global::System.ArgumentNullException("Nev");
+        public virtual int Update(string Osztaly, int Original_Id_Osztaly, string Original_Osztaly, int Id_Osztaly) {
+            if ((Osztaly == null)) {
+                throw new global::System.ArgumentNullException("Osztaly");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nev));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Osztaly));
             }
-            if ((Jelszo == null)) {
-                throw new global::System.ArgumentNullException("Jelszo");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Jelszo));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((byte)(Admin));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id_user));
-            if ((Original_Nev == null)) {
-                throw new global::System.ArgumentNullException("Original_Nev");
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id_Osztaly));
+            if ((Original_Osztaly == null)) {
+                throw new global::System.ArgumentNullException("Original_Osztaly");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Nev));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Osztaly));
             }
-            if ((Original_Jelszo == null)) {
-                throw new global::System.ArgumentNullException("Original_Jelszo");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Jelszo));
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((byte)(Original_Admin));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Id_user));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Id_Osztaly));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1029,8 +938,8 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nev, string Jelszo, byte Admin, int Original_Id_user, string Original_Nev, string Original_Jelszo, byte Original_Admin) {
-            return this.Update(Nev, Jelszo, Admin, Original_Id_user, Original_Nev, Original_Jelszo, Original_Admin, Original_Id_user);
+        public virtual int Update(string Osztaly, int Original_Id_Osztaly, string Original_Osztaly) {
+            return this.Update(Osztaly, Original_Id_Osztaly, Original_Osztaly, Original_Id_Osztaly);
         }
     }
     
@@ -1046,7 +955,7 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         
         private UpdateOrderOption _updateOrder;
         
-        private UsersTableAdapter _usersTableAdapter;
+        private OsztalyokTableAdapter _osztalyokTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1068,12 +977,12 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public UsersTableAdapter UsersTableAdapter {
+        public OsztalyokTableAdapter OsztalyokTableAdapter {
             get {
-                return this._usersTableAdapter;
+                return this._osztalyokTableAdapter;
             }
             set {
-                this._usersTableAdapter = value;
+                this._osztalyokTableAdapter = value;
             }
         }
         
@@ -1096,9 +1005,9 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._usersTableAdapter != null) 
-                            && (this._usersTableAdapter.Connection != null))) {
-                    return this._usersTableAdapter.Connection;
+                if (((this._osztalyokTableAdapter != null) 
+                            && (this._osztalyokTableAdapter.Connection != null))) {
+                    return this._osztalyokTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1113,7 +1022,7 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._usersTableAdapter != null)) {
+                if ((this._osztalyokTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1125,14 +1034,14 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(UsersDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(OsztalyokDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._usersTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._osztalyokTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Osztalyok.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._usersTableAdapter.Update(updatedRows));
+                    result = (result + this._osztalyokTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1144,13 +1053,13 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(UsersDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(OsztalyokDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._usersTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._osztalyokTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Osztalyok.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._usersTableAdapter.Update(addedRows));
+                    result = (result + this._osztalyokTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1162,13 +1071,13 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(UsersDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(OsztalyokDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._usersTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._osztalyokTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Osztalyok.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._usersTableAdapter.Update(deletedRows));
+                    result = (result + this._osztalyokTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1204,15 +1113,15 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(UsersDS dataSet) {
+        public virtual int UpdateAll(OsztalyokDS dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._usersTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._usersTableAdapter.Connection) == false))) {
+            if (((this._osztalyokTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._osztalyokTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1248,13 +1157,13 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._usersTableAdapter != null)) {
-                    revertConnections.Add(this._usersTableAdapter, this._usersTableAdapter.Connection);
-                    this._usersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._usersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._usersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._usersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._usersTableAdapter.Adapter);
+                if ((this._osztalyokTableAdapter != null)) {
+                    revertConnections.Add(this._osztalyokTableAdapter, this._osztalyokTableAdapter.Connection);
+                    this._osztalyokTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._osztalyokTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._osztalyokTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._osztalyokTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._osztalyokTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1315,9 +1224,9 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._usersTableAdapter != null)) {
-                    this._usersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._usersTableAdapter]));
-                    this._usersTableAdapter.Transaction = null;
+                if ((this._osztalyokTableAdapter != null)) {
+                    this._osztalyokTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._osztalyokTableAdapter]));
+                    this._osztalyokTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

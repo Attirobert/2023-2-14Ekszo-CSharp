@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Iktatas {
+namespace Iktatas.DataSets {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace Iktatas {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("IktatEgyesDS")]
+    [global::System.Xml.Serialization.XmlRootAttribute("IktatDS")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class IktatEgyesDS : global::System.Data.DataSet {
+    public partial class IktatDS : global::System.Data.DataSet {
         
         private iktatDataTable tableiktat;
         
@@ -38,7 +38,7 @@ namespace Iktatas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public IktatEgyesDS() {
+        public IktatDS() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -49,7 +49,7 @@ namespace Iktatas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected IktatEgyesDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected IktatDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -161,7 +161,7 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            IktatEgyesDS cln = ((IktatEgyesDS)(base.Clone()));
+            IktatDS cln = ((IktatDS)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -253,9 +253,9 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "IktatEgyesDS";
+            this.DataSetName = "IktatDS";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/IktatEgyesDS.xsd";
+            this.Namespace = "http://tempuri.org/IktatDS.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableiktat = new iktatDataTable();
@@ -303,7 +303,7 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            IktatEgyesDS ds = new IktatEgyesDS();
+            IktatDS ds = new IktatDS();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -642,7 +642,7 @@ namespace Iktatas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                IktatEgyesDS ds = new IktatEgyesDS();
+                IktatDS ds = new IktatDS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -920,7 +920,7 @@ namespace Iktatas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                IktatEgyesDS ds = new IktatEgyesDS();
+                IktatDS ds = new IktatDS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1229,7 +1229,7 @@ namespace Iktatas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                IktatEgyesDS ds = new IktatEgyesDS();
+                IktatDS ds = new IktatDS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1612,7 +1612,7 @@ namespace Iktatas {
         }
     }
 }
-namespace Iktatas.IktatEgyesDSTableAdapters {
+namespace Iktatas.DataSets.IktatDSTableAdapters {
     
     
     /// <summary>
@@ -1808,7 +1808,7 @@ SELECT Id_iktat, Iktatoszam, IdUser, Datum, IdTema, Leiras FROM iktat WHERE (Id_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(IktatEgyesDS.iktatDataTable dataTable) {
+        public virtual int Fill(IktatDS.iktatDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1821,9 +1821,9 @@ SELECT Id_iktat, Iktatoszam, IdUser, Datum, IdTema, Leiras FROM iktat WHERE (Id_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual IktatEgyesDS.iktatDataTable GetData() {
+        public virtual IktatDS.iktatDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            IktatEgyesDS.iktatDataTable dataTable = new IktatEgyesDS.iktatDataTable();
+            IktatDS.iktatDataTable dataTable = new IktatDS.iktatDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1831,14 +1831,14 @@ SELECT Id_iktat, Iktatoszam, IdUser, Datum, IdTema, Leiras FROM iktat WHERE (Id_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(IktatEgyesDS.iktatDataTable dataTable) {
+        public virtual int Update(IktatDS.iktatDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(IktatEgyesDS dataSet) {
+        public virtual int Update(IktatDS dataSet) {
             return this.Adapter.Update(dataSet, "iktat");
         }
         
@@ -2162,7 +2162,7 @@ SELECT Id_iktat, Iktatoszam, IdUser, Datum, IdTema, Leiras FROM iktat WHERE (Id_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(IktatEgyesDS.TemakDataTable dataTable) {
+        public virtual int Fill(IktatDS.TemakDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2175,9 +2175,9 @@ SELECT Id_iktat, Iktatoszam, IdUser, Datum, IdTema, Leiras FROM iktat WHERE (Id_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual IktatEgyesDS.TemakDataTable GetData() {
+        public virtual IktatDS.TemakDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            IktatEgyesDS.TemakDataTable dataTable = new IktatEgyesDS.TemakDataTable();
+            IktatDS.TemakDataTable dataTable = new IktatDS.TemakDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2185,14 +2185,14 @@ SELECT Id_iktat, Iktatoszam, IdUser, Datum, IdTema, Leiras FROM iktat WHERE (Id_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(IktatEgyesDS.TemakDataTable dataTable) {
+        public virtual int Update(IktatDS.TemakDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(IktatEgyesDS dataSet) {
+        public virtual int Update(IktatDS dataSet) {
             return this.Adapter.Update(dataSet, "Temak");
         }
         
@@ -2490,7 +2490,7 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(IktatEgyesDS.UsersDataTable dataTable) {
+        public virtual int Fill(IktatDS.UsersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2503,9 +2503,9 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual IktatEgyesDS.UsersDataTable GetData() {
+        public virtual IktatDS.UsersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            IktatEgyesDS.UsersDataTable dataTable = new IktatEgyesDS.UsersDataTable();
+            IktatDS.UsersDataTable dataTable = new IktatDS.UsersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2513,14 +2513,14 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(IktatEgyesDS.UsersDataTable dataTable) {
+        public virtual int Update(IktatDS.UsersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(IktatEgyesDS dataSet) {
+        public virtual int Update(IktatDS dataSet) {
             return this.Adapter.Update(dataSet, "Users");
         }
         
@@ -2803,7 +2803,7 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(IktatEgyesDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(IktatDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._temakTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Temak.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -2840,7 +2840,7 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(IktatEgyesDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(IktatDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._temakTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Temak.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -2874,7 +2874,7 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(IktatEgyesDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(IktatDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._iktatTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.iktat.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -2932,7 +2932,7 @@ SELECT Id_user, Nev, Jelszo, Admin FROM Users WHERE (Id_user = @Id_user)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(IktatEgyesDS dataSet) {
+        public virtual int UpdateAll(IktatDS dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

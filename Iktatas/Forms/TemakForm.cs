@@ -31,5 +31,20 @@ namespace Iktatas
             this.temakTableAdapter.Fill(this.temakDS.Temak);
 
         }
+
+        private void temakBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.temakBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.temakDS1);
+
+        }
+
+        private void TemakForm_Load_1(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'temakDS1.Temak' table. You can move, or remove it, as needed.
+            this.temakTableAdapter1.Fill(this.temakDS1.Temak);
+
+        }
     }
 }

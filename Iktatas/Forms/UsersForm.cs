@@ -31,5 +31,20 @@ namespace Iktatas
             this.usersTableAdapter.Fill(this.usersDS.Users);
 
         }
+
+        private void usersBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usersBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.usersDS1);
+
+        }
+
+        private void UsersForm_Load_1(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'usersDS1.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter1.Fill(this.usersDS1.Users);
+
+        }
     }
 }

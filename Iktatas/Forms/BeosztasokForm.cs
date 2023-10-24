@@ -31,5 +31,20 @@ namespace Iktatas
             this.beosztasokTableAdapter.Fill(this.beosztasokDS.Beosztasok);
 
         }
+
+        private void beosztasokBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.beosztasokBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.beosztasokDS1);
+
+        }
+
+        private void BeosztasokForm_Load_1(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'beosztasokDS1.Beosztasok' table. You can move, or remove it, as needed.
+            this.beosztasokTableAdapter1.Fill(this.beosztasokDS1.Beosztasok);
+
+        }
     }
 }
