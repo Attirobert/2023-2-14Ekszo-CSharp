@@ -230,9 +230,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\Beosztasok.sql" />
     <Content Include="Data\dbo.Beosztasok.data.sql" />
     <Content Include="Data\dbo.Beosztasok.sql" />
+    <Content Include="Data\dbo.iktat.data.sql" />
+    <Content Include="Data\dbo.iktat.sql.sql" />
     <Content Include="Data\dbo.Osztalyok.data.sql" />
     <Content Include="Data\dbo.Osztalyok.sql" />
     <Content Include="Data\dbo.Users.data.sql" />
