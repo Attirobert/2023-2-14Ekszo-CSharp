@@ -114,12 +114,14 @@ namespace Iktatas
             this.címzettekLeveleiToolStripMenuItem.Name = "címzettekLeveleiToolStripMenuItem";
             this.címzettekLeveleiToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.címzettekLeveleiToolStripMenuItem.Text = "Címzettek levelei";
+            this.címzettekLeveleiToolStripMenuItem.Click += new System.EventHandler(this.címzettekLeveleiToolStripMenuItem_Click);
             // 
             // levelekDátumSzerintToolStripMenuItem
             // 
             this.levelekDátumSzerintToolStripMenuItem.Name = "levelekDátumSzerintToolStripMenuItem";
-            this.levelekDátumSzerintToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.levelekDátumSzerintToolStripMenuItem.Text = "Levelek dátum szerint";
+            this.levelekDátumSzerintToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.levelekDátumSzerintToolStripMenuItem.Text = "Levelek szűrése iktatási dátum szerint";
+            this.levelekDátumSzerintToolStripMenuItem.Click += new System.EventHandler(this.levelekDátumSzerintToolStripMenuItem_Click);
             // 
             // MainForm
             // 

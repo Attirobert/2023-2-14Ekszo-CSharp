@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSets\CimzettSzuresDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CimzettSzuresDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\BeosztasokDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -62,11 +67,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IktatDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CimzettSzuresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CimzettSzuresForm.Designer.cs">
+      <DependentUpon>CimzettSzuresForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IktatForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\IktatForm.Designer.cs">
       <DependentUpon>IktatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LevelekIktatasDatumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LevelekIktatasDatumForm.Designer.cs">
+      <DependentUpon>LevelekIktatasDatumForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -84,6 +101,11 @@
     </Compile>
     <Compile Include="Forms\OsztalyokForm.Designer.cs">
       <DependentUpon>OsztalyokForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\LevelekIktatasDatumDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LevelekIktatasDatumDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,8 +134,14 @@
     <EmbeddedResource Include="Forms\BeosztasokForm.resx">
       <DependentUpon>BeosztasokForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CimzettSzuresForm.resx">
+      <DependentUpon>CimzettSzuresForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\IktatForm.resx">
       <DependentUpon>IktatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LevelekIktatasDatumForm.resx">
+      <DependentUpon>LevelekIktatasDatumForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -136,6 +164,17 @@
     <EmbeddedResource Include="Forms\UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSets\CimzettSzuresDS.xsc">
+      <DependentUpon>CimzettSzuresDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\CimzettSzuresDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CimzettSzuresDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\CimzettSzuresDS.xss">
+      <DependentUpon>CimzettSzuresDS.xsd</DependentUpon>
+    </None>
     <None Include="DataSets\BeosztasokDS.xsc">
       <DependentUpon>BeosztasokDS.xsd</DependentUpon>
     </None>
@@ -168,6 +207,17 @@
     </None>
     <None Include="DataSets\OsztalyokDS.xss">
       <DependentUpon>OsztalyokDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\LevelekIktatasDatumDS.xsc">
+      <DependentUpon>LevelekIktatasDatumDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\LevelekIktatasDatumDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LevelekIktatasDatumDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\LevelekIktatasDatumDS.xss">
+      <DependentUpon>LevelekIktatasDatumDS.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
