@@ -60,10 +60,10 @@ namespace Iktatas
         {
             string ma = DateTime.Today.ToShortDateString();
 
-            if (e.ColumnIndex == 3 && e.FormattedValue.ToString() != ma)
-            {
-                MessageBox.Show("Hibás dátum!");
-            }
+            //if (e.ColumnIndex == 3 && e.FormattedValue.ToString() != ma)
+            //{
+            //    MessageBox.Show("Hibás dátum!");
+            //}
         }
 
         private void iktatBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
