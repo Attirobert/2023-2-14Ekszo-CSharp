@@ -32,7 +32,8 @@ namespace Iktatas.Forms
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label datumLabel;
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iktatBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.datumComboBox = new System.Windows.Forms.ComboBox();
+            this.iktatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.levelekIktatasDatumDS = new Iktatas.DataSets.LevelekIktatasDatumDS();
             this.panel2 = new System.Windows.Forms.Panel();
             this.iktatDataGridView = new System.Windows.Forms.DataGridView();
@@ -44,24 +45,30 @@ namespace Iktatas.Forms
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.temakBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iktatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iktatTableAdapter = new Iktatas.DataSets.LevelekIktatasDatumDSTableAdapters.iktatTableAdapter();
             this.tableAdapterManager = new Iktatas.DataSets.LevelekIktatasDatumDSTableAdapters.TableAdapterManager();
             this.temakTableAdapter = new Iktatas.DataSets.LevelekIktatasDatumDSTableAdapters.TemakTableAdapter();
             this.usersTableAdapter = new Iktatas.DataSets.LevelekIktatasDatumDSTableAdapters.UsersTableAdapter();
-            this.datumComboBox = new System.Windows.Forms.ComboBox();
-            this.iktatBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.iktatBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             datumLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.levelekIktatasDatumDS)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iktatDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.temakBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // datumLabel
+            // 
+            datumLabel.AutoSize = true;
+            datumLabel.Location = new System.Drawing.Point(297, 25);
+            datumLabel.Name = "datumLabel";
+            datumLabel.Size = new System.Drawing.Size(41, 13);
+            datumLabel.TabIndex = 0;
+            datumLabel.Text = "Datum:";
             // 
             // panel1
             // 
@@ -73,10 +80,23 @@ namespace Iktatas.Forms
             this.panel1.Size = new System.Drawing.Size(800, 65);
             this.panel1.TabIndex = 0;
             // 
-            // iktatBindingSource3
+            // datumComboBox
             // 
-            this.iktatBindingSource3.DataMember = "iktat";
-            this.iktatBindingSource3.DataSource = this.levelekIktatasDatumDS;
+            this.datumComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.iktatBindingSource, "Datum", true));
+            this.datumComboBox.DataSource = this.iktatBindingSource1;
+            this.datumComboBox.DisplayMember = "Datum";
+            this.datumComboBox.FormattingEnabled = true;
+            this.datumComboBox.Location = new System.Drawing.Point(344, 22);
+            this.datumComboBox.Name = "datumComboBox";
+            this.datumComboBox.Size = new System.Drawing.Size(180, 21);
+            this.datumComboBox.TabIndex = 1;
+            this.datumComboBox.ValueMember = "Id_iktat";
+            this.datumComboBox.SelectedIndexChanged += new System.EventHandler(this.datumComboBox_SelectedIndexChanged);
+            // 
+            // iktatBindingSource
+            // 
+            this.iktatBindingSource.DataMember = "iktat";
+            this.iktatBindingSource.DataSource = this.levelekIktatasDatumDS;
             // 
             // levelekIktatasDatumDS
             // 
@@ -168,11 +188,6 @@ namespace Iktatas.Forms
             this.dataGridViewTextBoxColumn6.HeaderText = "Leírás";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // iktatBindingSource
-            // 
-            this.iktatBindingSource.DataMember = "iktat";
-            this.iktatBindingSource.DataSource = this.levelekIktatasDatumDS;
-            // 
             // iktatTableAdapter
             // 
             this.iktatTableAdapter.ClearBeforeFill = true;
@@ -193,32 +208,10 @@ namespace Iktatas.Forms
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // datumLabel
+            // iktatBindingSource1
             // 
-            datumLabel.AutoSize = true;
-            datumLabel.Location = new System.Drawing.Point(297, 25);
-            datumLabel.Name = "datumLabel";
-            datumLabel.Size = new System.Drawing.Size(41, 13);
-            datumLabel.TabIndex = 0;
-            datumLabel.Text = "Datum:";
-            // 
-            // datumComboBox
-            // 
-            this.datumComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.iktatBindingSource, "Datum", true));
-            this.datumComboBox.DataSource = this.iktatBindingSource4;
-            this.datumComboBox.DisplayMember = "Datum";
-            this.datumComboBox.FormattingEnabled = true;
-            this.datumComboBox.Location = new System.Drawing.Point(344, 22);
-            this.datumComboBox.Name = "datumComboBox";
-            this.datumComboBox.Size = new System.Drawing.Size(180, 21);
-            this.datumComboBox.TabIndex = 1;
-            this.datumComboBox.ValueMember = "Id_iktat";
-            this.datumComboBox.SelectedIndexChanged += new System.EventHandler(this.datumComboBox_SelectedIndexChanged);
-            // 
-            // iktatBindingSource4
-            // 
-            this.iktatBindingSource4.DataMember = "iktat";
-            this.iktatBindingSource4.DataSource = this.levelekIktatasDatumDS;
+            this.iktatBindingSource1.DataMember = "iktat";
+            this.iktatBindingSource1.DataSource = this.levelekIktatasDatumDS;
             // 
             // LevelekIktatasDatumForm
             // 
@@ -232,14 +225,13 @@ namespace Iktatas.Forms
             this.Load += new System.EventHandler(this.LevelekIktatasDatumForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.levelekIktatasDatumDS)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iktatDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.temakBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iktatBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,8 +255,7 @@ namespace Iktatas.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.BindingSource iktatBindingSource3;
         private System.Windows.Forms.ComboBox datumComboBox;
-        private System.Windows.Forms.BindingSource iktatBindingSource4;
+        private System.Windows.Forms.BindingSource iktatBindingSource1;
     }
 }
