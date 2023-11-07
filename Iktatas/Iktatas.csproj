@@ -79,6 +79,18 @@
     <Compile Include="Forms\IktatForm.Designer.cs">
       <DependentUpon>IktatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IktatoTallozForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IktatoTallozForm.Designer.cs">
+      <DependentUpon>IktatoTallozForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LevelekDatumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LevelekDatumForm.Designer.cs">
+      <DependentUpon>LevelekDatumForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LevelekIktatasDatumForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +118,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LevelekIktatasDatumDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\LevelekDatumDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LevelekDatumDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\IktatoTallozDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IktatoTallozDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,6 +161,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IktatForm.resx">
       <DependentUpon>IktatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IktatoTallozForm.resx">
+      <DependentUpon>IktatoTallozForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LevelekDatumForm.resx">
+      <DependentUpon>LevelekDatumForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LevelekIktatasDatumForm.resx">
       <DependentUpon>LevelekIktatasDatumForm.cs</DependentUpon>
@@ -218,6 +246,28 @@
     </None>
     <None Include="DataSets\LevelekIktatasDatumDS.xss">
       <DependentUpon>LevelekIktatasDatumDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\LevelekDatumDS.xsc">
+      <DependentUpon>LevelekDatumDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\LevelekDatumDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LevelekDatumDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\LevelekDatumDS.xss">
+      <DependentUpon>LevelekDatumDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\IktatoTallozDS.xsc">
+      <DependentUpon>IktatoTallozDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\IktatoTallozDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IktatoTallozDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\IktatoTallozDS.xss">
+      <DependentUpon>IktatoTallozDS.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

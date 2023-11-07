@@ -60,5 +60,17 @@ namespace Iktatas
             LevelekIktatasDatumForm frm = new LevelekIktatasDatumForm();
             frm.Show();
         }
+
+        private void levelekSzűréseNaptárralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LevelekDatumForm frm = new LevelekDatumForm();
+            frm.Show();
+        }
+
+        private void iktatóKönyvToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IktatoTallozForm frm = new IktatoTallozForm();
+            frm.Show();
+        }
     }
 }
