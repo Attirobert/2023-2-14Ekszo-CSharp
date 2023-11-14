@@ -233,8 +233,12 @@
     <Content Include="Data\Beosztasok.sql" />
     <Content Include="Data\dbo.Beosztasok.data.sql" />
     <Content Include="Data\dbo.Beosztasok.sql" />
+    <Content Include="Data\dbo.iktat.data.sql" />
+    <Content Include="Data\dbo.iktat.sql.sql" />
     <Content Include="Data\dbo.Osztalyok.data.sql" />
     <Content Include="Data\dbo.Osztalyok.sql" />
+    <Content Include="Data\dbo.Temak.data.sql" />
+    <Content Include="Data\dbo.Temak.sql" />
     <Content Include="Data\dbo.Users.data.sql" />
     <Content Include="Data\dbo.Users.sql" />
   </ItemGroup>

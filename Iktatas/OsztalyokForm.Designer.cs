@@ -1,5 +1,4 @@
-﻿
-namespace Iktatas
+﻿namespace Iktatas
 {
     partial class OsztalyokForm
     {
@@ -104,7 +103,7 @@ namespace Iktatas
             this.osztalyokBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.osztalyokBindingNavigator.Name = "osztalyokBindingNavigator";
             this.osztalyokBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.osztalyokBindingNavigator.Size = new System.Drawing.Size(405, 25);
+            this.osztalyokBindingNavigator.Size = new System.Drawing.Size(800, 25);
             this.osztalyokBindingNavigator.TabIndex = 0;
             this.osztalyokBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -213,28 +212,27 @@ namespace Iktatas
             this.osztalyokDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.osztalyokDataGridView.Location = new System.Drawing.Point(0, 25);
             this.osztalyokDataGridView.Name = "osztalyokDataGridView";
-            this.osztalyokDataGridView.Size = new System.Drawing.Size(405, 425);
+            this.osztalyokDataGridView.Size = new System.Drawing.Size(800, 425);
             this.osztalyokDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id_Osztaly";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Azonosító";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id_Osztaly";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.ToolTipText = "Osztály kódja";
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Osztaly";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Osztály";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Osztaly";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // OsztalyokForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.osztalyokDataGridView);
             this.Controls.Add(this.osztalyokBindingNavigator);
             this.Name = "OsztalyokForm";

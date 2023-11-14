@@ -1,5 +1,4 @@
-﻿
-namespace Iktatas
+﻿namespace Iktatas
 {
     partial class TemakForm
     {
@@ -219,14 +218,14 @@ namespace Iktatas
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id_Tema";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Azonosító";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id_Tema";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Tema";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Levél témák";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tema";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // TemakForm
@@ -237,7 +236,7 @@ namespace Iktatas
             this.Controls.Add(this.temakDataGridView);
             this.Controls.Add(this.temakBindingNavigator);
             this.Name = "TemakForm";
-            this.Text = "Levelezési témák";
+            this.Text = "Témák";
             this.Load += new System.EventHandler(this.TemakForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.temakDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.temakBindingSource)).EndInit();

@@ -20,20 +20,6 @@ namespace Iktatas
         private void iktatBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.iktatBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.iktatEgyesDS);
-
-        }
-
-        private void IktatEgyes_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'iktatEgyesDS.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.iktatEgyesDS.Users);
-            // TODO: This line of code loads data into the 'iktatEgyesDS.iktat' table. You can move, or remove it, as needed.
-            this.iktatTableAdapter.Fill(this.iktatEgyesDS.iktat);
-            // TODO: This line of code loads data into the 'iktatEgyesDS.iktat' table. You can move, or remove it, as needed.
-            this.iktatTableAdapter.Fill(this.iktatEgyesDS.iktat);
-
         }
 
         private void iktatBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
@@ -41,6 +27,17 @@ namespace Iktatas
             this.Validate();
             this.iktatBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.iktatEgyesDS);
+
+        }
+
+        private void IktatEgyes_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'iktatEgyesDS.Temak' table. You can move, or remove it, as needed.
+            this.temakTableAdapter.Fill(this.iktatEgyesDS.Temak);
+            // TODO: This line of code loads data into the 'iktatEgyesDS.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.iktatEgyesDS.Users);
+            // TODO: This line of code loads data into the 'iktatEgyesDS.Iktat' table. You can move, or remove it, as needed.
+            this.iktatTableAdapter.Fill(this.iktatEgyesDS.Iktat);
 
         }
     }

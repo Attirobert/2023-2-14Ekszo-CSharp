@@ -1,5 +1,4 @@
-﻿
-namespace Iktatas
+﻿namespace Iktatas
 {
     partial class BeosztasokForm
     {
@@ -104,7 +103,7 @@ namespace Iktatas
             this.beosztasokBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.beosztasokBindingNavigator.Name = "beosztasokBindingNavigator";
             this.beosztasokBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.beosztasokBindingNavigator.Size = new System.Drawing.Size(363, 25);
+            this.beosztasokBindingNavigator.Size = new System.Drawing.Size(800, 25);
             this.beosztasokBindingNavigator.TabIndex = 0;
             this.beosztasokBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -213,29 +212,27 @@ namespace Iktatas
             this.beosztasokDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.beosztasokDataGridView.Location = new System.Drawing.Point(0, 25);
             this.beosztasokDataGridView.Name = "beosztasokDataGridView";
-            this.beosztasokDataGridView.Size = new System.Drawing.Size(363, 425);
+            this.beosztasokDataGridView.Size = new System.Drawing.Size(800, 425);
             this.beosztasokDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id_Beosztas";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Azonosító";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id_Beosztas";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.ToolTipText = "Beosztás kódja";
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Beosztas";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Beosztás";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Beosztas";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ToolTipText = "Beosztás megnevezése";
             // 
             // BeosztasokForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.beosztasokDataGridView);
             this.Controls.Add(this.beosztasokBindingNavigator);
             this.Name = "BeosztasokForm";
