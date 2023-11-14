@@ -72,5 +72,12 @@ namespace Iktatas
             IktatoTallozForm frm = new IktatoTallozForm();
             frm.Show();
         }
+
+        private void iktatásTallózóToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IktatoTallozasForm frm = new IktatoTallozasForm();
+            frm.ShowDialog();
+        }
+
     }
 }

@@ -33,6 +33,7 @@ namespace Iktatas
             this.iktatóKönyvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.levelezésiTémákToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iktatásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iktatásTallózóToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.személyekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.osztályokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beosztásokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,6 @@ namespace Iktatas
             this.címzettekLeveleiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.levelekDátumSzerintToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.levelekSzűréseNaptárralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iktatásTallózóToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,16 +72,23 @@ namespace Iktatas
             // levelezésiTémákToolStripMenuItem
             // 
             this.levelezésiTémákToolStripMenuItem.Name = "levelezésiTémákToolStripMenuItem";
-            this.levelezésiTémákToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.levelezésiTémákToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.levelezésiTémákToolStripMenuItem.Text = "Levelezési témák";
             this.levelezésiTémákToolStripMenuItem.Click += new System.EventHandler(this.levelezésiTémákToolStripMenuItem_Click);
             // 
             // iktatásToolStripMenuItem
             // 
             this.iktatásToolStripMenuItem.Name = "iktatásToolStripMenuItem";
-            this.iktatásToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.iktatásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.iktatásToolStripMenuItem.Text = "Iktatás";
             this.iktatásToolStripMenuItem.Click += new System.EventHandler(this.iktatásToolStripMenuItem_Click);
+            // 
+            // iktatásTallózóToolStripMenuItem
+            // 
+            this.iktatásTallózóToolStripMenuItem.Name = "iktatásTallózóToolStripMenuItem";
+            this.iktatásTallózóToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iktatásTallózóToolStripMenuItem.Text = "Iktatás tallózó";
+            this.iktatásTallózóToolStripMenuItem.Click += new System.EventHandler(this.iktatásTallózóToolStripMenuItem_Click);
             // 
             // személyekToolStripMenuItem
             // 
@@ -134,12 +141,6 @@ namespace Iktatas
             this.levelekSzűréseNaptárralToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.levelekSzűréseNaptárralToolStripMenuItem.Text = "Levelek szűrése naptárral";
             this.levelekSzűréseNaptárralToolStripMenuItem.Click += new System.EventHandler(this.levelekSzűréseNaptárralToolStripMenuItem_Click);
-            // 
-            // iktatásTallózóToolStripMenuItem
-            // 
-            this.iktatásTallózóToolStripMenuItem.Name = "iktatásTallózóToolStripMenuItem";
-            this.iktatásTallózóToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.iktatásTallózóToolStripMenuItem.Text = "Iktatás tallózó";
             // 
             // MainForm
             // 
