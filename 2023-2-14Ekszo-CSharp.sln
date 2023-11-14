@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iktatas", "Iktatas\Iktatas.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobiles", "Mobiles", "{E965A742-1024-4E76-8C54-C808191730AE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySqlProjects", "MySqlProjects", "{DACCE6C0-91EC-475A-8C93-D26C6F86CCBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IktatoMySql", "IktatoMySql\IktatoMySql.csproj", "{0EDB0705-6610-46BB-9473-334D692934C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,9 +33,16 @@ Global
 		{D2621662-2E90-422F-AA32-204833BDE898}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2621662-2E90-422F-AA32-204833BDE898}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2621662-2E90-422F-AA32-204833BDE898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EDB0705-6610-46BB-9473-334D692934C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EDB0705-6610-46BB-9473-334D692934C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EDB0705-6610-46BB-9473-334D692934C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EDB0705-6610-46BB-9473-334D692934C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0EDB0705-6610-46BB-9473-334D692934C7} = {DACCE6C0-91EC-475A-8C93-D26C6F86CCBB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7574420D-2DDE-4739-AFA8-5A4359A52713}
