@@ -103,6 +103,7 @@ namespace IktatoMySql
             this.beosztásokToolStripMenuItem.Name = "beosztásokToolStripMenuItem";
             this.beosztásokToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.beosztásokToolStripMenuItem.Text = "Beosztások";
+            this.beosztásokToolStripMenuItem.Click += new System.EventHandler(this.beosztásokToolStripMenuItem_Click);
             // 
             // kimutatásokToolStripMenuItem
             // 

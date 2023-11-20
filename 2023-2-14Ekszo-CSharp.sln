@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySqlProjects", "MySqlProje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IktatoMySql", "IktatoMySql\IktatoMySql.csproj", "{0EDB0705-6610-46BB-9473-334D692934C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnectPelda2", "DBConnectPelda2\DBConnectPelda2.csproj", "{25285B0A-9272-40AA-9075-0AA64DA427D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBConnectionsClass", "DBConnectionsClass\DBConnectionsClass.csproj", "{ACE9AA2E-ACA7-4463-90C2-6C29DCC3EF26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,12 +41,22 @@ Global
 		{0EDB0705-6610-46BB-9473-334D692934C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EDB0705-6610-46BB-9473-334D692934C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EDB0705-6610-46BB-9473-334D692934C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25285B0A-9272-40AA-9075-0AA64DA427D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25285B0A-9272-40AA-9075-0AA64DA427D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25285B0A-9272-40AA-9075-0AA64DA427D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25285B0A-9272-40AA-9075-0AA64DA427D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE9AA2E-ACA7-4463-90C2-6C29DCC3EF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE9AA2E-ACA7-4463-90C2-6C29DCC3EF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE9AA2E-ACA7-4463-90C2-6C29DCC3EF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE9AA2E-ACA7-4463-90C2-6C29DCC3EF26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0EDB0705-6610-46BB-9473-334D692934C7} = {DACCE6C0-91EC-475A-8C93-D26C6F86CCBB}
+		{25285B0A-9272-40AA-9075-0AA64DA427D9} = {DACCE6C0-91EC-475A-8C93-D26C6F86CCBB}
+		{ACE9AA2E-ACA7-4463-90C2-6C29DCC3EF26} = {DACCE6C0-91EC-475A-8C93-D26C6F86CCBB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7574420D-2DDE-4739-AFA8-5A4359A52713}
