@@ -22,5 +22,11 @@ namespace IktatoMySql
             BeosztasokForm frm = new BeosztasokForm();
             frm.Show();
         }
+
+        private void osztályokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OsztalyokForm frm = new OsztalyokForm();
+            frm.Show();
+        }
     }
 }

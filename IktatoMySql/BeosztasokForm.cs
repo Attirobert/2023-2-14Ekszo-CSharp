@@ -30,7 +30,7 @@ namespace IktatoMySql
             InitializeDataGridView();
             InitializeBindingNavigator();
             connection.Close();
-            beosztasClass = new BeosztasokClass();
+            beosztasClass = new BeosztasokClass(DBConnectionsClass.GetConnectionString_2("MyDbConnection"));
         }
 
         private void InitializeBindingNavigator()
@@ -50,6 +50,9 @@ namespace IktatoMySql
             string query = $"SELECT * FROM {TableName}";
             dataAdapter = new MySqlDataAdapter(query, connection);
             dataAdapter.Fill(dataTable);
+
+            // Adatok feltöltése a DataSet-be
+            dataSet.Tables.Add(dataTable);
 
             // BindingSource beállítása
             bindingSource = new BindingSource();
@@ -82,6 +85,10 @@ namespace IktatoMySql
 
         private void Save()
         {
+            int insert = 0,
+                delete = 0,
+                update = 0;
+
             // Változtatások mentése
             foreach (DataRow row in dataSet.Tables[TableName].Rows)
             {
@@ -89,15 +96,25 @@ namespace IktatoMySql
                 {
                     case DataRowState.Added:
                         beosztasClass.dataInsert(row, connection);
+                        insert++;
                         break;
                     case DataRowState.Deleted:
                         beosztasClass.dataDelete(row, connection);
+                        delete++;
                         break;
                     case DataRowState.Modified:
                         beosztasClass.dataUpdate(row, connection);
+                        update++;
                         break;
                 }
             }
+
+            if (insert+update+delete>0)
+            {
+            MessageBox.Show($"Az adatbázis frissítése sikeres\nHozzá adva: {insert}\nTörölve: {delete}\nMódosítva: {update}", "Információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }else
+            MessageBox.Show("Nem volt szükség frissítésre", "Információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void BeosztasokForm_FormClosing(object sender, FormClosingEventArgs e)

@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -12,15 +13,17 @@ namespace IktatoMySql
     {
         public MySqlConnection connection;
 
-        public BeosztasokClass()
+        public BeosztasokClass(string connectionString)
         {
+            connection = new MySqlConnection(connectionString);
         }
 
         public void dataInsert(DataRow row, MySqlConnection connection)
         {
-            using (MySqlCommand cmd = new MySqlCommand("INSERT INTO beosztasok (Beosztas) VALUES (@param2)", connection))
+            using (MySqlCommand cmd = new MySqlCommand("BeosztasInsert", connection))
             {
-                cmd.Parameters.Add("@param2", MySqlDbType.VarChar, 20).Value = row["Beosztas"];
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@param1", MySqlDbType.VarChar, 20).Value = row["Beosztas"];
 
                 connection.Open();
                 cmd.ExecuteNonQuery();
@@ -30,10 +33,11 @@ namespace IktatoMySql
 
         public void dataUpdate(DataRow row, MySqlConnection connection)
         {
-            using (MySqlCommand cmd = new MySqlCommand("UPDATE beosztasok SET Beosztas = @Param2 WHERE Id_Beosztas = @PrimaryKey", connection))
+            using (MySqlCommand cmd = new MySqlCommand("BeosztasUpdate", connection))
             {
-                cmd.Parameters.Add("@param2", MySqlDbType.VarChar, 20).Value = row["Beosztas"];
+                cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.Add("@Beosztas", MySqlDbType.VarChar, 20).Value = row["Beosztas"];
                 cmd.Parameters.Add("@PrimaryKey", MySqlDbType.Int32, 11).Value = row["Id_Beosztas", DataRowVersion.Original];
 
                 connection.Open();
@@ -44,8 +48,10 @@ namespace IktatoMySql
 
         public void dataDelete(DataRow row, MySqlConnection connection)
         {
-            using (MySqlCommand cmd = new MySqlCommand("DELETE FROM beosztasok WHERE Id_Beosztas = @PrimaryKey", connection))
+            using (MySqlCommand cmd = new MySqlCommand("BeosztasDelete", connection))
             {
+                cmd.CommandType = CommandType.StoredProcedure;
+
                 cmd.Parameters.Add("@PrimaryKey", MySqlDbType.Int32, 11).Value = row["Id_Beosztas", DataRowVersion.Original];
 
                 connection.Open();
