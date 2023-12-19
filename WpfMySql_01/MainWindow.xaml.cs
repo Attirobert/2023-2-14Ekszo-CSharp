@@ -20,11 +20,24 @@ namespace WpfMySql_01
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    struct Params
+    {
+        public string paramName;
+        public string paramValue;
+    }
+
     public partial class MainWindow : Window
     {
         // Osztályváltozók
         private string connectionString = "Server='localhost'; Database='wpfmysql'; User Id='root'; Password='';";
         private DataTable dataTable = new DataTable();
+
+        // Eljrás nevek
+        private string teljesLista = "PersonsAll",
+            insertPerson = "InsertPerson",
+            updatePerson = "UpdatePerson",
+            deletePerson = "DeletePerson";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -39,10 +52,11 @@ namespace WpfMySql_01
                 try
                 {
                     connection.Open();
-                    string query = "SELECT * FROM Persons";
+                    string query = teljesLista;
 
                     // Előállítjuk az objektumot, amely eléri a az adatbázist és a táblát
                     MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     // Az adapter tudja lekérdezni az adatokat
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
@@ -64,25 +78,36 @@ namespace WpfMySql_01
 
         private void btnInsert_Click(object sender, RoutedEventArgs e)
         {
-            string name = txbName.Text;
+            // Paraméter lista előállítása
+            List<Params> pList = new List<Params>();
+            Params ps;
+            ps.paramName = "@pName";
+            ps.paramValue = txbName.Text;
+            pList.Add(ps);
 
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    string query = $"INSERT INTO persons (Name) VALUES ('{name}')";
-                    MySqlCommand cmd = new MySqlCommand(query, connection);
-                    cmd.ExecuteNonQuery();
+            Dbproc(connectionString, insertPerson, pList);
+            #region Régi insert
+            // string name = txbName.Text;
+            //using (MySqlConnection connection = new MySqlConnection(connectionString))
+            //{
+            //    try
+            //    {
+            //        connection.Open();
+            //        string query = insertPerson;
+            //        MySqlCommand cmd = new MySqlCommand(query, connection);
+            //        cmd.CommandType = CommandType.StoredProcedure;
+            //        cmd.Parameters.AddWithValue("@pName", name);
+            //        cmd.ExecuteNonQuery();
 
-                    LoadData();
-                }
-                catch (Exception ex)
-                {
+            //        LoadData();
+            //    }
+            //    catch (Exception ex)
+            //    {
 
-                   MessageBox.Show($"Hiba a beszúrás közben: {ex.Message}");
-                }
-            }
+            //       MessageBox.Show($"Hiba a beszúrás közben: {ex.Message}");
+            //    }
+            //}
+            #endregion Régi insert
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
@@ -90,30 +115,46 @@ namespace WpfMySql_01
             DataRowView selectedRow = dataGrid.SelectedItem as DataRowView;
             if (selectedRow != null)
             {
-                // A kijelölt sorból kiszedem az adatokat
-                int id = Convert.ToInt32(selectedRow["ID"]);
-                string name = txbName.Text;
+                // Paraméter lista előállítása
+                List<Params> pList = new List<Params>();
+                Params ps;
+                ps.paramName = "@pName";
+                ps.paramValue = txbName.Text;
+                pList.Add(ps);
 
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
-                    try
-                    {
-                        connection.Open();
-                        string query = "UPDATE persons SET Name = @Name WHERE ID = @ID";
-                        MySqlCommand cmd = new MySqlCommand(query, connection);
-                        cmd.Parameters.AddWithValue("@Name", name);
-                        cmd.Parameters.AddWithValue("@ID", id);
+                ps.paramName = "@pID";
+                ps.paramValue = selectedRow["ID"].ToString();
+                pList.Add(ps);
 
-                        cmd.ExecuteNonQuery();
 
-                        LoadData();
-                    }
-                    catch (Exception ex)
-                    {
+                Dbproc(connectionString, updatePerson, pList);
 
-                        MessageBox.Show($"Hiba a frissítés közben: {ex.Message}");
-                    }
-                }
+                #region Régi Update
+                //// A kijelölt sorból kiszedem az adatokat
+                //int id = Convert.ToInt32(selectedRow["ID"]);
+                //string name = txbName.Text;
+                //using (MySqlConnection connection = new MySqlConnection(connectionString))
+                //{
+                //    try
+                //    {
+                //        connection.Open();
+                //        string query = updatePerson;
+                //        MySqlCommand cmd = new MySqlCommand(query, connection);
+                //        cmd.CommandType = CommandType.StoredProcedure;
+                //        cmd.Parameters.AddWithValue("@pName", name);
+                //        cmd.Parameters.AddWithValue("@pID", id);
+
+                //        cmd.ExecuteNonQuery();
+
+                //        LoadData();
+                //    }
+                //    catch (Exception ex)
+                //    {
+
+                //        MessageBox.Show($"Hiba a frissítés közben: {ex.Message}");
+                //    }
+                //}
+                #endregion Régi Update
             }
         }
 
@@ -130,9 +171,10 @@ namespace WpfMySql_01
                     try
                     {
                         connection.Open();
-                        string query = "DELETE FROM persons WHERE ID = @ID";
+                        string query = deletePerson;
                         MySqlCommand cmd = new MySqlCommand(query, connection);
-                        cmd.Parameters.AddWithValue("@ID", id);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@pID", id);
 
                         cmd.ExecuteNonQuery();
 
@@ -145,6 +187,35 @@ namespace WpfMySql_01
                     }
                 }
             }
+        }
+
+        private void Dbproc(string con, string qu, List<Params> paramList)
+        {
+            using (MySqlConnection connection = new MySqlConnection(con))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = qu;
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+
+                    foreach (Params item in paramList)
+                    {
+                        cmd.Parameters.AddWithValue(item.paramName, item.paramValue);
+                    }
+                    cmd.ExecuteNonQuery();
+
+                    LoadData();
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show($"Hiba a művelet közben:\n {ex.Message}");
+                }
+            }
+
         }
     }
 }
