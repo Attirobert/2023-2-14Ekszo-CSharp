@@ -7,7 +7,27 @@
         mc:Ignorable="d"
         Title="WPF MySql demo" Height="450" Width="800">
     <StackPanel>
-        <TextBox x:Name="txbName" Height="23" Text="Név"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+        <TextBox x:Name="txbName" Height="23" Text="Név" Grid.Column="0" Grid.Row="0"/>
+            <TextBox x:Name="txbJelszo" Height="23" Text="Jelszo" Grid.Column="1" Grid.Row="0"/>
+            <CheckBox x:Name="cbxAdmin" Content="Admin" Grid.Column="0" Grid.Row="1"/>
+            <ComboBox x:Name="cbxNeme" SelectedIndex="0" Grid.Column="1" Grid.Row="1" >
+            <ComboBoxItem Content="Férfi"/>
+            <ComboBoxItem Content="Nő"/>
+        </ComboBox>
+            <TextBox x:Name="txbEmail" Height="23" Text="Email" Grid.Column="1" Grid.Row="2"/>
+            <TextBox x:Name="txbSzulev" Height="23" Text="Születési év" Grid.Column="0" Grid.Row="2"/>
+        </Grid>
         <Grid Height="38">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
