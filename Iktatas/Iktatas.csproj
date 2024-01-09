@@ -79,6 +79,12 @@
     <Compile Include="Forms\IktatForm.Designer.cs">
       <DependentUpon>IktatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IktatoTallozasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IktatoTallozasForm.Designer.cs">
+      <DependentUpon>IktatoTallozasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IktatoTallozForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IktatoTallozDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSets\IktatoTallozasDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IktatoTallozasDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataSets\TemakDS.Designer.cs">
@@ -161,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IktatForm.resx">
       <DependentUpon>IktatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IktatoTallozasForm.resx">
+      <DependentUpon>IktatoTallozasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IktatoTallozForm.resx">
       <DependentUpon>IktatoTallozForm.cs</DependentUpon>
@@ -268,6 +282,17 @@
     </None>
     <None Include="DataSets\IktatoTallozDS.xss">
       <DependentUpon>IktatoTallozDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\IktatoTallozasDS.xsc">
+      <DependentUpon>IktatoTallozasDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\IktatoTallozasDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IktatoTallozasDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\IktatoTallozasDS.xss">
+      <DependentUpon>IktatoTallozasDS.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
