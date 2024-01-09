@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Iktatas.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Iktatas
 {
@@ -47,9 +49,27 @@ namespace Iktatas
             frm.Show();
         }
 
-        private void iktatóLapToolStripMenuItem_Click(object sender, EventArgs e)
+        private void címzettekLeveleiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IktatEgyes frm = new IktatEgyes();
+            CimzettSzuresForm frm = new CimzettSzuresForm();
+            frm.Show();
+        }
+
+        private void levelekDátumSzerintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LevelekIktatasDatumForm frm = new LevelekIktatasDatumForm();
+            frm.Show();
+        }
+
+        private void levelekSzűréseNaptárralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LevelekDatumForm frm = new LevelekDatumForm();
+            frm.Show();
+        }
+
+        private void iktatóKönyvToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IktatoTallozForm frm = new IktatoTallozForm();
             frm.Show();
         }
     }

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Iktatas {
+namespace Iktatas.DataSets {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace Iktatas {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("TemakDS")]
+    [global::System.Xml.Serialization.XmlRootAttribute("BeosztasokDS")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class TemakDS : global::System.Data.DataSet {
+    public partial class BeosztasokDS : global::System.Data.DataSet {
         
-        private TemakDataTable tableTemak;
+        private BeosztasokDataTable tableBeosztasok;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public TemakDS() {
+        public BeosztasokDS() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Iktatas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected TemakDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected BeosztasokDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Iktatas {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Temak"] != null)) {
-                    base.Tables.Add(new TemakDataTable(ds.Tables["Temak"]));
+                if ((ds.Tables["Beosztasok"] != null)) {
+                    base.Tables.Add(new BeosztasokDataTable(ds.Tables["Beosztasok"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Iktatas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TemakDataTable Temak {
+        public BeosztasokDataTable Beosztasok {
             get {
-                return this.tableTemak;
+                return this.tableBeosztasok;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            TemakDS cln = ((TemakDS)(base.Clone()));
+            BeosztasokDS cln = ((BeosztasokDS)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Iktatas {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Temak"] != null)) {
-                    base.Tables.Add(new TemakDataTable(ds.Tables["Temak"]));
+                if ((ds.Tables["Beosztasok"] != null)) {
+                    base.Tables.Add(new BeosztasokDataTable(ds.Tables["Beosztasok"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTemak = ((TemakDataTable)(base.Tables["Temak"]));
+            this.tableBeosztasok = ((BeosztasokDataTable)(base.Tables["Beosztasok"]));
             if ((initTable == true)) {
-                if ((this.tableTemak != null)) {
-                    this.tableTemak.InitVars();
+                if ((this.tableBeosztasok != null)) {
+                    this.tableBeosztasok.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "TemakDS";
+            this.DataSetName = "BeosztasokDS";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/TemakDS.xsd";
+            this.Namespace = "http://tempuri.org/BeosztasokDS.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTemak = new TemakDataTable();
-            base.Tables.Add(this.tableTemak);
+            this.tableBeosztasok = new BeosztasokDataTable();
+            base.Tables.Add(this.tableBeosztasok);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeTemak() {
+        private bool ShouldSerializeBeosztasok() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Iktatas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            TemakDS ds = new TemakDS();
+            BeosztasokDS ds = new BeosztasokDS();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,23 @@ namespace Iktatas {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void TemakRowChangeEventHandler(object sender, TemakRowChangeEvent e);
+        public delegate void BeosztasokRowChangeEventHandler(object sender, BeosztasokRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TemakDataTable : global::System.Data.TypedTableBase<TemakRow> {
+        public partial class BeosztasokDataTable : global::System.Data.TypedTableBase<BeosztasokRow> {
             
-            private global::System.Data.DataColumn columnId_Tema;
+            private global::System.Data.DataColumn columnId_Beosztas;
             
-            private global::System.Data.DataColumn columnTema;
+            private global::System.Data.DataColumn columnBeosztas;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TemakDataTable() {
-                this.TableName = "Temak";
+            public BeosztasokDataTable() {
+                this.TableName = "Beosztasok";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +294,7 @@ namespace Iktatas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal TemakDataTable(global::System.Data.DataTable table) {
+            internal BeosztasokDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +311,24 @@ namespace Iktatas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected TemakDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BeosztasokDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Id_TemaColumn {
+            public global::System.Data.DataColumn Id_BeosztasColumn {
                 get {
-                    return this.columnId_Tema;
+                    return this.columnId_Beosztas;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TemaColumn {
+            public global::System.Data.DataColumn BeosztasColumn {
                 get {
-                    return this.columnTema;
+                    return this.columnBeosztas;
                 }
             }
             
@@ -343,53 +343,53 @@ namespace Iktatas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TemakRow this[int index] {
+            public BeosztasokRow this[int index] {
                 get {
-                    return ((TemakRow)(this.Rows[index]));
+                    return ((BeosztasokRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TemakRowChangeEventHandler TemakRowChanging;
+            public event BeosztasokRowChangeEventHandler BeosztasokRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TemakRowChangeEventHandler TemakRowChanged;
+            public event BeosztasokRowChangeEventHandler BeosztasokRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TemakRowChangeEventHandler TemakRowDeleting;
+            public event BeosztasokRowChangeEventHandler BeosztasokRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TemakRowChangeEventHandler TemakRowDeleted;
+            public event BeosztasokRowChangeEventHandler BeosztasokRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddTemakRow(TemakRow row) {
+            public void AddBeosztasokRow(BeosztasokRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TemakRow AddTemakRow(string Tema) {
-                TemakRow rowTemakRow = ((TemakRow)(this.NewRow()));
+            public BeosztasokRow AddBeosztasokRow(string Beosztas) {
+                BeosztasokRow rowBeosztasokRow = ((BeosztasokRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Tema};
-                rowTemakRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTemakRow);
-                return rowTemakRow;
+                        Beosztas};
+                rowBeosztasokRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBeosztasokRow);
+                return rowBeosztasokRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TemakRow FindById_Tema(int Id_Tema) {
-                return ((TemakRow)(this.Rows.Find(new object[] {
-                            Id_Tema})));
+            public BeosztasokRow FindById_Beosztas(int Id_Beosztas) {
+                return ((BeosztasokRow)(this.Rows.Find(new object[] {
+                            Id_Beosztas})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TemakDataTable cln = ((TemakDataTable)(base.Clone()));
+                BeosztasokDataTable cln = ((BeosztasokDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -397,59 +397,59 @@ namespace Iktatas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TemakDataTable();
+                return new BeosztasokDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnId_Tema = base.Columns["Id_Tema"];
-                this.columnTema = base.Columns["Tema"];
+                this.columnId_Beosztas = base.Columns["Id_Beosztas"];
+                this.columnBeosztas = base.Columns["Beosztas"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnId_Tema = new global::System.Data.DataColumn("Id_Tema", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_Tema);
-                this.columnTema = new global::System.Data.DataColumn("Tema", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTema);
+                this.columnId_Beosztas = new global::System.Data.DataColumn("Id_Beosztas", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Beosztas);
+                this.columnBeosztas = new global::System.Data.DataColumn("Beosztas", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBeosztas);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId_Tema}, true));
-                this.columnId_Tema.AutoIncrement = true;
-                this.columnId_Tema.AutoIncrementSeed = -1;
-                this.columnId_Tema.AutoIncrementStep = -1;
-                this.columnId_Tema.AllowDBNull = false;
-                this.columnId_Tema.ReadOnly = true;
-                this.columnId_Tema.Unique = true;
-                this.columnTema.AllowDBNull = false;
-                this.columnTema.MaxLength = 20;
+                                this.columnId_Beosztas}, true));
+                this.columnId_Beosztas.AutoIncrement = true;
+                this.columnId_Beosztas.AutoIncrementSeed = -1;
+                this.columnId_Beosztas.AutoIncrementStep = -1;
+                this.columnId_Beosztas.AllowDBNull = false;
+                this.columnId_Beosztas.ReadOnly = true;
+                this.columnId_Beosztas.Unique = true;
+                this.columnBeosztas.AllowDBNull = false;
+                this.columnBeosztas.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TemakRow NewTemakRow() {
-                return ((TemakRow)(this.NewRow()));
+            public BeosztasokRow NewBeosztasokRow() {
+                return ((BeosztasokRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TemakRow(builder);
+                return new BeosztasokRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TemakRow);
+                return typeof(BeosztasokRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TemakRowChanged != null)) {
-                    this.TemakRowChanged(this, new TemakRowChangeEvent(((TemakRow)(e.Row)), e.Action));
+                if ((this.BeosztasokRowChanged != null)) {
+                    this.BeosztasokRowChanged(this, new BeosztasokRowChangeEvent(((BeosztasokRow)(e.Row)), e.Action));
                 }
             }
             
@@ -457,8 +457,8 @@ namespace Iktatas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TemakRowChanging != null)) {
-                    this.TemakRowChanging(this, new TemakRowChangeEvent(((TemakRow)(e.Row)), e.Action));
+                if ((this.BeosztasokRowChanging != null)) {
+                    this.BeosztasokRowChanging(this, new BeosztasokRowChangeEvent(((BeosztasokRow)(e.Row)), e.Action));
                 }
             }
             
@@ -466,8 +466,8 @@ namespace Iktatas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TemakRowDeleted != null)) {
-                    this.TemakRowDeleted(this, new TemakRowChangeEvent(((TemakRow)(e.Row)), e.Action));
+                if ((this.BeosztasokRowDeleted != null)) {
+                    this.BeosztasokRowDeleted(this, new BeosztasokRowChangeEvent(((BeosztasokRow)(e.Row)), e.Action));
                 }
             }
             
@@ -475,14 +475,14 @@ namespace Iktatas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TemakRowDeleting != null)) {
-                    this.TemakRowDeleting(this, new TemakRowChangeEvent(((TemakRow)(e.Row)), e.Action));
+                if ((this.BeosztasokRowDeleting != null)) {
+                    this.BeosztasokRowDeleting(this, new BeosztasokRowChangeEvent(((BeosztasokRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveTemakRow(TemakRow row) {
+            public void RemoveBeosztasokRow(BeosztasokRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -491,7 +491,7 @@ namespace Iktatas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TemakDS ds = new TemakDS();
+                BeosztasokDS ds = new BeosztasokDS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -509,7 +509,7 @@ namespace Iktatas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TemakDataTable";
+                attribute2.FixedValue = "BeosztasokDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -553,36 +553,36 @@ namespace Iktatas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TemakRow : global::System.Data.DataRow {
+        public partial class BeosztasokRow : global::System.Data.DataRow {
             
-            private TemakDataTable tableTemak;
+            private BeosztasokDataTable tableBeosztasok;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal TemakRow(global::System.Data.DataRowBuilder rb) : 
+            internal BeosztasokRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTemak = ((TemakDataTable)(this.Table));
+                this.tableBeosztasok = ((BeosztasokDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id_Tema {
+            public int Id_Beosztas {
                 get {
-                    return ((int)(this[this.tableTemak.Id_TemaColumn]));
+                    return ((int)(this[this.tableBeosztasok.Id_BeosztasColumn]));
                 }
                 set {
-                    this[this.tableTemak.Id_TemaColumn] = value;
+                    this[this.tableBeosztasok.Id_BeosztasColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Tema {
+            public string Beosztas {
                 get {
-                    return ((string)(this[this.tableTemak.TemaColumn]));
+                    return ((string)(this[this.tableBeosztasok.BeosztasColumn]));
                 }
                 set {
-                    this[this.tableTemak.TemaColumn] = value;
+                    this[this.tableBeosztasok.BeosztasColumn] = value;
                 }
             }
         }
@@ -591,22 +591,22 @@ namespace Iktatas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class TemakRowChangeEvent : global::System.EventArgs {
+        public class BeosztasokRowChangeEvent : global::System.EventArgs {
             
-            private TemakRow eventRow;
+            private BeosztasokRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TemakRowChangeEvent(TemakRow row, global::System.Data.DataRowAction action) {
+            public BeosztasokRowChangeEvent(BeosztasokRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TemakRow Row {
+            public BeosztasokRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -622,7 +622,7 @@ namespace Iktatas {
         }
     }
 }
-namespace Iktatas.TemakDSTableAdapters {
+namespace Iktatas.DataSets.BeosztasokDSTableAdapters {
     
     
     /// <summary>
@@ -634,7 +634,7 @@ namespace Iktatas.TemakDSTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TemakTableAdapter : global::System.ComponentModel.Component {
+    public partial class BeosztasokTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -648,7 +648,7 @@ namespace Iktatas.TemakDSTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public TemakTableAdapter() {
+        public BeosztasokTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -745,33 +745,33 @@ namespace Iktatas.TemakDSTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Temak";
-            tableMapping.ColumnMappings.Add("Id_Tema", "Id_Tema");
-            tableMapping.ColumnMappings.Add("Tema", "Tema");
+            tableMapping.DataSetTable = "Beosztasok";
+            tableMapping.ColumnMappings.Add("Id_Beosztas", "Id_Beosztas");
+            tableMapping.ColumnMappings.Add("Beosztas", "Beosztas");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Temak] WHERE (([Id_Tema] = @Original_Id_Tema) AND ([Tema] = @O" +
-                "riginal_Tema))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Beosztasok] WHERE (([Id_Beosztas] = @Original_Id_Beosztas) AND" +
+                " ([Beosztas] = @Original_Beosztas))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Tema", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Tema", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tema", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tema", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Beosztas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Beosztas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Beosztas", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Beosztas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Temak] ([Tema]) VALUES (@Tema);\r\nSELECT Id_Tema, Tema FROM Tem" +
-                "ak WHERE (Id_Tema = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Beosztasok] ([Beosztas]) VALUES (@Beosztas);\r\nSELECT Id_Beoszt" +
+                "as, Beosztas FROM Beosztasok WHERE (Id_Beosztas = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tema", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tema", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Beosztas", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Beosztas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Temak] SET [Tema] = @Tema WHERE (([Id_Tema] = @Original_Id_Tema) AN" +
-                "D ([Tema] = @Original_Tema));\r\nSELECT Id_Tema, Tema FROM Temak WHERE (Id_Tema = " +
-                "@Id_Tema)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Beosztasok] SET [Beosztas] = @Beosztas WHERE (([Id_Beosztas] = @Ori" +
+                "ginal_Id_Beosztas) AND ([Beosztas] = @Original_Beosztas));\r\nSELECT Id_Beosztas, " +
+                "Beosztas FROM Beosztasok WHERE (Id_Beosztas = @Id_Beosztas)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tema", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tema", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Tema", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Tema", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tema", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tema", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Tema", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Tema", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Beosztas", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Beosztas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Beosztas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Beosztas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Beosztas", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Beosztas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Beosztas", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Beosztas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -787,7 +787,7 @@ namespace Iktatas.TemakDSTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id_Tema, Tema FROM dbo.Temak";
+            this._commandCollection[0].CommandText = "SELECT Id_Beosztas, Beosztas FROM dbo.Beosztasok";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -795,7 +795,7 @@ namespace Iktatas.TemakDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TemakDS.TemakDataTable dataTable) {
+        public virtual int Fill(BeosztasokDS.BeosztasokDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -808,9 +808,9 @@ namespace Iktatas.TemakDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TemakDS.TemakDataTable GetData() {
+        public virtual BeosztasokDS.BeosztasokDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TemakDS.TemakDataTable dataTable = new TemakDS.TemakDataTable();
+            BeosztasokDS.BeosztasokDataTable dataTable = new BeosztasokDS.BeosztasokDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -818,15 +818,15 @@ namespace Iktatas.TemakDSTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TemakDS.TemakDataTable dataTable) {
+        public virtual int Update(BeosztasokDS.BeosztasokDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TemakDS dataSet) {
-            return this.Adapter.Update(dataSet, "Temak");
+        public virtual int Update(BeosztasokDS dataSet) {
+            return this.Adapter.Update(dataSet, "Beosztasok");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -848,13 +848,13 @@ namespace Iktatas.TemakDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id_Tema, string Original_Tema) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_Tema));
-            if ((Original_Tema == null)) {
-                throw new global::System.ArgumentNullException("Original_Tema");
+        public virtual int Delete(int Original_Id_Beosztas, string Original_Beosztas) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_Beosztas));
+            if ((Original_Beosztas == null)) {
+                throw new global::System.ArgumentNullException("Original_Beosztas");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Tema));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Beosztas));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -876,12 +876,12 @@ namespace Iktatas.TemakDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Tema) {
-            if ((Tema == null)) {
-                throw new global::System.ArgumentNullException("Tema");
+        public virtual int Insert(string Beosztas) {
+            if ((Beosztas == null)) {
+                throw new global::System.ArgumentNullException("Beosztas");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Tema));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Beosztas));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -903,21 +903,21 @@ namespace Iktatas.TemakDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Tema, int Original_Id_Tema, string Original_Tema, int Id_Tema) {
-            if ((Tema == null)) {
-                throw new global::System.ArgumentNullException("Tema");
+        public virtual int Update(string Beosztas, int Original_Id_Beosztas, string Original_Beosztas, int Id_Beosztas) {
+            if ((Beosztas == null)) {
+                throw new global::System.ArgumentNullException("Beosztas");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Tema));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Beosztas));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id_Tema));
-            if ((Original_Tema == null)) {
-                throw new global::System.ArgumentNullException("Original_Tema");
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id_Beosztas));
+            if ((Original_Beosztas == null)) {
+                throw new global::System.ArgumentNullException("Original_Beosztas");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Tema));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Beosztas));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Id_Tema));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Id_Beosztas));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -938,8 +938,8 @@ namespace Iktatas.TemakDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Tema, int Original_Id_Tema, string Original_Tema) {
-            return this.Update(Tema, Original_Id_Tema, Original_Tema, Original_Id_Tema);
+        public virtual int Update(string Beosztas, int Original_Id_Beosztas, string Original_Beosztas) {
+            return this.Update(Beosztas, Original_Id_Beosztas, Original_Beosztas, Original_Id_Beosztas);
         }
     }
     
@@ -955,7 +955,7 @@ namespace Iktatas.TemakDSTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private TemakTableAdapter _temakTableAdapter;
+        private BeosztasokTableAdapter _beosztasokTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -977,12 +977,12 @@ namespace Iktatas.TemakDSTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public TemakTableAdapter TemakTableAdapter {
+        public BeosztasokTableAdapter BeosztasokTableAdapter {
             get {
-                return this._temakTableAdapter;
+                return this._beosztasokTableAdapter;
             }
             set {
-                this._temakTableAdapter = value;
+                this._beosztasokTableAdapter = value;
             }
         }
         
@@ -1005,9 +1005,9 @@ namespace Iktatas.TemakDSTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._temakTableAdapter != null) 
-                            && (this._temakTableAdapter.Connection != null))) {
-                    return this._temakTableAdapter.Connection;
+                if (((this._beosztasokTableAdapter != null) 
+                            && (this._beosztasokTableAdapter.Connection != null))) {
+                    return this._beosztasokTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1022,7 +1022,7 @@ namespace Iktatas.TemakDSTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._temakTableAdapter != null)) {
+                if ((this._beosztasokTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1034,14 +1034,14 @@ namespace Iktatas.TemakDSTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(TemakDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(BeosztasokDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._temakTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Temak.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._beosztasokTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Beosztasok.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._temakTableAdapter.Update(updatedRows));
+                    result = (result + this._beosztasokTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1053,13 +1053,13 @@ namespace Iktatas.TemakDSTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(TemakDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(BeosztasokDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._temakTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Temak.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._beosztasokTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Beosztasok.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._temakTableAdapter.Update(addedRows));
+                    result = (result + this._beosztasokTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1071,13 +1071,13 @@ namespace Iktatas.TemakDSTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(TemakDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(BeosztasokDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._temakTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Temak.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._beosztasokTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Beosztasok.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._temakTableAdapter.Update(deletedRows));
+                    result = (result + this._beosztasokTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1113,15 +1113,15 @@ namespace Iktatas.TemakDSTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(TemakDS dataSet) {
+        public virtual int UpdateAll(BeosztasokDS dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._temakTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._temakTableAdapter.Connection) == false))) {
+            if (((this._beosztasokTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._beosztasokTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1157,13 +1157,13 @@ namespace Iktatas.TemakDSTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._temakTableAdapter != null)) {
-                    revertConnections.Add(this._temakTableAdapter, this._temakTableAdapter.Connection);
-                    this._temakTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._temakTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._temakTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._temakTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._temakTableAdapter.Adapter);
+                if ((this._beosztasokTableAdapter != null)) {
+                    revertConnections.Add(this._beosztasokTableAdapter, this._beosztasokTableAdapter.Connection);
+                    this._beosztasokTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._beosztasokTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._beosztasokTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._beosztasokTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._beosztasokTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1224,9 +1224,9 @@ namespace Iktatas.TemakDSTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._temakTableAdapter != null)) {
-                    this._temakTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._temakTableAdapter]));
-                    this._temakTableAdapter.Transaction = null;
+                if ((this._beosztasokTableAdapter != null)) {
+                    this._beosztasokTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._beosztasokTableAdapter]));
+                    this._beosztasokTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

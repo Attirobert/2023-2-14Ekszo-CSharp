@@ -46,93 +46,135 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BeosztasokDS.Designer.cs">
+    <Compile Include="DataSets\CimzettSzuresDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CimzettSzuresDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\BeosztasokDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BeosztasokDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BeosztasokForm.cs">
+    <Compile Include="Forms\BeosztasokForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BeosztasokForm.Designer.cs">
+    <Compile Include="Forms\BeosztasokForm.Designer.cs">
       <DependentUpon>BeosztasokForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IktatDS.Designer.cs">
+    <Compile Include="DataSets\IktatDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IktatDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="IktatEgyes.cs">
+    <Compile Include="Forms\CimzettSzuresForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IktatEgyes.Designer.cs">
-      <DependentUpon>IktatEgyes.cs</DependentUpon>
+    <Compile Include="Forms\CimzettSzuresForm.Designer.cs">
+      <DependentUpon>CimzettSzuresForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IktatEgyesDS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IktatEgyesDS.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="IktatForm.cs">
+    <Compile Include="Forms\IktatForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IktatForm.Designer.cs">
+    <Compile Include="Forms\IktatForm.Designer.cs">
       <DependentUpon>IktatForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\IktatoTallozForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\IktatoTallozForm.Designer.cs">
+      <DependentUpon>IktatoTallozForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LevelekDatumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LevelekDatumForm.Designer.cs">
+      <DependentUpon>LevelekDatumForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LevelekIktatasDatumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LevelekIktatasDatumForm.Designer.cs">
+      <DependentUpon>LevelekIktatasDatumForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OsztalyokDS.Designer.cs">
+    <Compile Include="DataSets\OsztalyokDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OsztalyokDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="OsztalyokForm.cs">
+    <Compile Include="Forms\OsztalyokForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OsztalyokForm.Designer.cs">
+    <Compile Include="Forms\OsztalyokForm.Designer.cs">
       <DependentUpon>OsztalyokForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\LevelekIktatasDatumDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LevelekIktatasDatumDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\LevelekDatumDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LevelekDatumDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\IktatoTallozDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IktatoTallozDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TemakDS.Designer.cs">
+    <Compile Include="DataSets\TemakDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TemakDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TemakForm.cs">
+    <Compile Include="Forms\TemakForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TemakForm.Designer.cs">
+    <Compile Include="Forms\TemakForm.Designer.cs">
       <DependentUpon>TemakForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsersDS.Designer.cs">
+    <Compile Include="DataSets\UsersDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UsersDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="UsersForm.cs">
+    <Compile Include="Forms\UsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersForm.Designer.cs">
+    <Compile Include="Forms\UsersForm.Designer.cs">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BeosztasokForm.resx">
+    <EmbeddedResource Include="Forms\BeosztasokForm.resx">
       <DependentUpon>BeosztasokForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IktatEgyes.resx">
-      <DependentUpon>IktatEgyes.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CimzettSzuresForm.resx">
+      <DependentUpon>CimzettSzuresForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IktatForm.resx">
+    <EmbeddedResource Include="Forms\IktatForm.resx">
       <DependentUpon>IktatForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\IktatoTallozForm.resx">
+      <DependentUpon>IktatoTallozForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LevelekDatumForm.resx">
+      <DependentUpon>LevelekDatumForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LevelekIktatasDatumForm.resx">
+      <DependentUpon>LevelekIktatasDatumForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OsztalyokForm.resx">
+    <EmbeddedResource Include="Forms\OsztalyokForm.resx">
       <DependentUpon>OsztalyokForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -144,55 +186,88 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TemakForm.resx">
+    <EmbeddedResource Include="Forms\TemakForm.resx">
       <DependentUpon>TemakForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersForm.resx">
+    <EmbeddedResource Include="Forms\UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="BeosztasokDS.xsc">
+    <None Include="DataSets\CimzettSzuresDS.xsc">
+      <DependentUpon>CimzettSzuresDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\CimzettSzuresDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CimzettSzuresDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\CimzettSzuresDS.xss">
+      <DependentUpon>CimzettSzuresDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\BeosztasokDS.xsc">
       <DependentUpon>BeosztasokDS.xsd</DependentUpon>
     </None>
-    <None Include="BeosztasokDS.xsd">
+    <None Include="DataSets\BeosztasokDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>BeosztasokDS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BeosztasokDS.xss">
+    <None Include="DataSets\BeosztasokDS.xss">
       <DependentUpon>BeosztasokDS.xsd</DependentUpon>
     </None>
-    <None Include="IktatDS.xsc">
+    <None Include="DataSets\IktatDS.xsc">
       <DependentUpon>IktatDS.xsd</DependentUpon>
     </None>
-    <None Include="IktatDS.xsd">
+    <None Include="DataSets\IktatDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>IktatDS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="IktatDS.xss">
+    <None Include="DataSets\IktatDS.xss">
       <DependentUpon>IktatDS.xsd</DependentUpon>
     </None>
-    <None Include="IktatEgyesDS.xsc">
-      <DependentUpon>IktatEgyesDS.xsd</DependentUpon>
-    </None>
-    <None Include="IktatEgyesDS.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IktatEgyesDS.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="IktatEgyesDS.xss">
-      <DependentUpon>IktatEgyesDS.xsd</DependentUpon>
-    </None>
-    <None Include="OsztalyokDS.xsc">
+    <None Include="DataSets\OsztalyokDS.xsc">
       <DependentUpon>OsztalyokDS.xsd</DependentUpon>
     </None>
-    <None Include="OsztalyokDS.xsd">
+    <None Include="DataSets\OsztalyokDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>OsztalyokDS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="OsztalyokDS.xss">
+    <None Include="DataSets\OsztalyokDS.xss">
       <DependentUpon>OsztalyokDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\LevelekIktatasDatumDS.xsc">
+      <DependentUpon>LevelekIktatasDatumDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\LevelekIktatasDatumDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LevelekIktatasDatumDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\LevelekIktatasDatumDS.xss">
+      <DependentUpon>LevelekIktatasDatumDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\LevelekDatumDS.xsc">
+      <DependentUpon>LevelekDatumDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\LevelekDatumDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LevelekDatumDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\LevelekDatumDS.xss">
+      <DependentUpon>LevelekDatumDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\IktatoTallozDS.xsc">
+      <DependentUpon>IktatoTallozDS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\IktatoTallozDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IktatoTallozDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\IktatoTallozDS.xss">
+      <DependentUpon>IktatoTallozDS.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -203,26 +278,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TemakDS.xsc">
+    <None Include="DataSets\TemakDS.xsc">
       <DependentUpon>TemakDS.xsd</DependentUpon>
     </None>
-    <None Include="TemakDS.xsd">
+    <None Include="DataSets\TemakDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>TemakDS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="TemakDS.xss">
+    <None Include="DataSets\TemakDS.xss">
       <DependentUpon>TemakDS.xsd</DependentUpon>
     </None>
-    <None Include="UsersDS.xsc">
+    <None Include="DataSets\UsersDS.xsc">
       <DependentUpon>UsersDS.xsd</DependentUpon>
     </None>
-    <None Include="UsersDS.xsd">
+    <None Include="DataSets\UsersDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>UsersDS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="UsersDS.xss">
+    <None Include="DataSets\UsersDS.xss">
       <DependentUpon>UsersDS.xsd</DependentUpon>
     </None>
   </ItemGroup>
@@ -230,7 +305,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\Beosztasok.sql" />
     <Content Include="Data\dbo.Beosztasok.data.sql" />
     <Content Include="Data\dbo.Beosztasok.sql" />
     <Content Include="Data\dbo.iktat.data.sql" />
@@ -242,5 +316,6 @@
     <Content Include="Data\dbo.Users.data.sql" />
     <Content Include="Data\dbo.Users.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
